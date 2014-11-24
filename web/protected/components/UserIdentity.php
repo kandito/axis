@@ -19,7 +19,7 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		//find user by username
-		$user = User::model()->findByAttributes(array('username' => $this->username));
+		$user = Users::model()->findByAttributes(array('username' => $this->username));
 
 		if($user === null)
 			//if user not exist

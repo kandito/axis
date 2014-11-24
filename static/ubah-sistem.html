@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>MKI BEBAN</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/add-sistem.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">MKIBEBAN</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
+
+    <div class="grey-bg">
+      <div class="container main-content">
+        <div class="row"> 
+          <div class="col-xs-8">     
+              <h2>UBAH DATA SISTEM INFORMASI</h2>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row content-container">
+       <form class="form-horizontal col-sm-12" role="form">
+          <div class="form-group">
+            <label for="namaSI" class="col-sm-2 control-label">Nama Sistem Informasi</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="namaSI" placeholder="Nama Sistem Informasi">
+              
+            </div>
+            <div class="alert alert-danger col-sm-4" role="alert">Isi yang bener, COK!</div>
+          </div>
+          <div class="form-group">
+            <label for="estimasiPengguna" class="col-sm-2 control-label">Estimasi Pengguna</label>
+            <div class="col-sm-4">
+              <input type="password" class="form-control" id="estimasiPengguna" placeholder="Estimasi Pengguna">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="database" class="col-sm-2 control-label">Database</label>
+            <div class="col-sm-4">
+              <input type="password" class="form-control" id="database" placeholder="Database">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bandwidth" class="col-sm-2 control-label">Bandwidth</label>
+            <div class="col-sm-4">
+              <input type="password" class="form-control" id="bandwidth" placeholder="Bandwidth">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-4">
+              <button type="submit" class="btn btn-default">SAVE</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="alert alert-success col-sm-6" role="alert"><b>Sukses!</b> Sistem informasi telah ditambah</div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
