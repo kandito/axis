@@ -10,10 +10,9 @@
  * @property string $scope
  * @property string $audience
  * @property string $description
- * @property integer $id_assesment
  *
  * The followings are the available model relations:
- * @property Assesments $idAssesment
+ * @property Assesments[] $assesments
  * @property Steps[] $steps
  */
 class Standards extends CActiveRecord
@@ -34,13 +33,12 @@ class Standards extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('id_assesment', 'numerical', 'integerOnly'=>true),
+			array('name, purpose, scope', 'required'),
 			array('name', 'length', 'max'=>50),
 			array('purpose, scope, audience, description', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_standard, name, purpose, scope, audience, description, id_assesment', 'safe', 'on'=>'search'),
+			array('id_standard, name, purpose, scope, audience, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,7 +50,7 @@ class Standards extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idAssesment' => array(self::BELONGS_TO, 'Assesments', 'id_assesment'),
+			'assesments' => array(self::HAS_MANY, 'Assesments', 'id_standard'),
 			'steps' => array(self::HAS_MANY, 'Steps', 'id_standard'),
 		);
 	}
@@ -69,7 +67,6 @@ class Standards extends CActiveRecord
 			'scope' => 'Scope',
 			'audience' => 'Audience',
 			'description' => 'Description',
-			'id_assesment' => 'Id Assesment',
 		);
 	}
 
@@ -97,7 +94,6 @@ class Standards extends CActiveRecord
 		$criteria->compare('scope',$this->scope,true);
 		$criteria->compare('audience',$this->audience,true);
 		$criteria->compare('description',$this->description,true);
-		$criteria->compare('id_assesment',$this->id_assesment);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

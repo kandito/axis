@@ -43,8 +43,9 @@
         <div class="collapse navbar-collapse">
           	<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-					array('label'=>'Home', 'url'=>array('/site/index')),
-					array('label'=>'About', 'url'=>array('/site/about')),
+					array('label'=>'Home', 'url'=>array('/systems/index')),
+          array('label'=>'Standard', 'url'=>array('/standards/index')),
+					array('label'=>'About', 'url'=>array('/site/page', 'view' => 'about')),
 					array('label'=>'Contact', 'url'=>array('/site/contact')),
 				),
 				'encodeLabel' => false,

@@ -19,7 +19,7 @@ $this->menu=array(
 <div class="col-xs-8">     
     <h1>Selamat datang, <?php echo Yii::app()->user->name ?>!</h1>
     <p></p>
-    <?php echo CHtml::link('Add System', array('systems/create'), array('class' => 'btn btn-primary')); ?>
+    <?php echo CHtml::link('Tambah Sistem', array('systems/create'), array('class' => 'btn btn-primary')); ?>
 </div>
 </div>
 </div>      

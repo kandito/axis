@@ -13,6 +13,14 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Standards</h1>
+<div class="header-home">
+<div class="container">
+<div class="row"> 
+<div class="col-xs-8">     
+    <h1>Tambahkan Standard</h1>
+</div>
+</div>
+</div>      
+</div><!--/.container-->
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

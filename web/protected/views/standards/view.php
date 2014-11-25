@@ -16,17 +16,88 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Standards #<?php echo $model->id_standard; ?></h1>
+<div class="header-home">
+    <div class="container">
+    <div class="row"> 
+    <div class="col-xs-8">     
+        <h1>Detail <?php echo $model->name; ?></h1>
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Nama : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->name; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Purpose : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->purpose; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Scope : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->scope; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Audience : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->audience; ?></label>  
+            </div>
+          </div>  
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Description : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->description; ?></label>  
+            </div>
+          </div>  
+          
+        </form>
+        </div>
+      </div>
+    </div>      
+</div><!--/.header-home-->
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id_standard',
-		'name',
-		'purpose',
-		'scope',
-		'audience',
-		'description',
-		'id_assesment',
-	),
-)); ?>
+<div class="container">
+  <div class="row content-container">
+    <h3>Daftar Langkah Assesment</h3>
+    <?php echo CHtml::link('Tambahkan Step', Yii::app()->createUrl("steps/create",array("id"=>$model->id_standard)), array('class' => 'btn btn-primary')); ?>
+    <br>
+    <br>
+  <table class="table table-hover table-striped">
+    <thead>
+      <td>No</td>
+      <td>Nama</td>
+      <td>ID</td>
+      <td>Deskripsi</td>
+      <td>Action</td>
+    </thead>
+
+    <?php
+    	$i = 1; 
+    	foreach ($model->steps as $step) { 
+    ?>
+    	<tr>
+          <td><?php echo $i++ ?></td>
+          <td><?php echo $step->name ?></td>
+          <td><?php echo $step->id_step ?></td>
+          <td><?php echo $step->description ?></td>
+          <td>
+            <?php 
+              echo CHtml::link('View', array('steps/view', 'id'=>$step->id_step), array('class' => 'btn btn-primary')); 
+              echo CHtml::link("Delete", '#', array(
+              'submit'=>array(
+                'steps/delete', 
+                'id' => $step->id_step),
+              'params'=> array('returnUrl'=> Yii::app()->createUrl('standards/view',array('id' => $model->id_standard))),
+              'confirm' => 'Are you sure you want to delete?',
+              'class' => 'btn btn-danger btn-listview'));
+            ?>
+            
+          </td>
+        </tr>
+   	<?php } ?>
+  </table>
+  </div>
+</div>

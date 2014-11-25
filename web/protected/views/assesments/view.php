@@ -66,7 +66,7 @@ $this->menu=array(
 
 <div class="container">
   <div class="row content-container">
-    <h3>Daftar Assesment</h3>
+    <h3>Daftar Auditor</h3>
     <?php echo CHtml::link('Tambahkan Auditor', Yii::app()->createUrl("userassesments/create", array('id'=>$model->id_assesment)), array('class' => 'btn btn-primary')); ?>
     <br>
     <br>
@@ -87,7 +87,6 @@ $this->menu=array(
           <td><?php echo $user_assesment->idUser->name ?></td>
           <td><?php echo $user_assesment->id_user_assesment ?></td>
           <td>
-            <button type="button" class="btn btn-success">Download</button>
             <?php 
               echo CHtml::link('View', array('userassesments/view', 'id'=>$user_assesment->id_user_assesment), array('class' => 'btn btn-primary')); 
               echo CHtml::link("Delete", '#', array(

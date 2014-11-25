@@ -59,11 +59,11 @@ class Systems extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_system' => 'Id System',
-			'name' => 'Name',
-			'description' => 'Description',
-			'number_of_user' => 'Number Of User',
-			'person_in_charge' => 'Person In Charge',
+			'id_system' => 'ID System',
+			'name' => 'Nama',
+			'description' => 'Deskripsi',
+			'number_of_user' => 'Jumlah Pengguna',
+			'person_in_charge' => 'Penanggung Jawab',
 		);
 	}
 

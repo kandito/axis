@@ -16,18 +16,56 @@ $this->menu=array(
 );
 ?>
 
-<h1>View StepResults #<?php echo $model->id_step_result; ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id_step_result',
-		'value',
-		'notes',
-		'time',
-		'date',
-		'comment',
-		'id_step',
-		'id_user_assesment',
-	),
-)); ?>
+<div class="header-home">
+    <div class="container">
+    <div class="row"> 
+    <div class="col-xs-8">     
+        <h1>Detail: <?php echo $model->idStep->name ?> <i>oleh</i> <?php echo $model->idUserAssesment->idUser->name ?> </h1>
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Sistem : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->idUserAssesment->idAssesment->idSystem->name; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Assesment : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->idUserAssesment->idAssesment->name; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Auditor : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->idUserAssesment->idUser->name; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Tanggal : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->date; ?> <?php echo $model->time; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Nilai : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->value; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Catatan : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->notes; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Komentar : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->comment; ?></label>  
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>      
+</div><!--/.header-home-->

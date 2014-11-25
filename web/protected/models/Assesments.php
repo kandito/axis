@@ -13,10 +13,11 @@
  * @property string $location
  * @property string $requirements
  * @property integer $id_system
+ * @property integer $id_standard
  *
  * The followings are the available model relations:
+ * @property Standards $idStandard
  * @property Systems $idSystem
- * @property Standards[] $standards
  * @property UserAssesments[] $userAssesments
  */
 class Assesments extends CActiveRecord
@@ -38,12 +39,12 @@ class Assesments extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('id_system', 'numerical', 'integerOnly'=>true),
+			array('id_system, id_standard', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>50),
 			array('description, date, time, objectives, location, requirements', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_assesment, name, description, date, time, objectives, location, requirements, id_system', 'safe', 'on'=>'search'),
+			array('id_assesment, name, description, date, time, objectives, location, requirements, id_system, id_standard', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,8 +56,8 @@ class Assesments extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idStandard' => array(self::BELONGS_TO, 'Standards', 'id_standard'),
 			'idSystem' => array(self::BELONGS_TO, 'Systems', 'id_system'),
-			'standards' => array(self::HAS_MANY, 'Standards', 'id_assesment'),
 			'userAssesments' => array(self::HAS_MANY, 'UserAssesments', 'id_assesment'),
 		);
 	}
@@ -67,15 +68,16 @@ class Assesments extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_assesment' => 'Id Assesment',
-			'name' => 'Name',
-			'description' => 'Description',
-			'date' => 'Date',
-			'time' => 'Time',
-			'objectives' => 'Objectives',
-			'location' => 'Location',
-			'requirements' => 'Requirements',
-			'id_system' => 'Id System',
+			'id_assesment' => 'ID Assesment',
+			'name' => 'Nama',
+			'description' => 'Deskripsi',
+			'date' => 'Tanggal',
+			'time' => 'Waktu',
+			'objectives' => 'Tujuan',
+			'location' => 'Lokasi',
+			'requirements' => 'Kebutuhan',
+			'id_system' => 'Sistem',
+			'id_standard' => 'Standard',
 		);
 	}
 
@@ -106,6 +108,7 @@ class Assesments extends CActiveRecord
 		$criteria->compare('location',$this->location,true);
 		$criteria->compare('requirements',$this->requirements,true);
 		$criteria->compare('id_system',$this->id_system);
+		$criteria->compare('id_standard',$this->id_standard);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

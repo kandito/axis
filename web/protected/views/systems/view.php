@@ -78,7 +78,6 @@ $this->menu=array(
           <td><?php echo $assesment->id_assesment ?></td>
           <td><?php echo $assesment->date ?> : <?php echo $assesment->time ?></td>
           <td>
-            <button type="button" class="btn btn-success">Download</button>
             <?php 
               echo CHtml::link('View', array('assesments/view', 'id'=>$assesment->id_assesment), array('class' => 'btn btn-primary')); 
               echo CHtml::link("Delete", '#', array(

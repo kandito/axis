@@ -59,9 +59,9 @@ class UserAssesments extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_user_assesment' => 'Id User Assesment',
-			'id_user' => 'Id User',
-			'id_assesment' => 'Id Assesment',
+			'id_user_assesment' => 'ID User Assesment',
+			'id_user' => 'User',
+			'id_assesment' => 'Assesment',
 		);
 	}
 

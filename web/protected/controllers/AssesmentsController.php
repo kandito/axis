@@ -176,7 +176,6 @@ class AssesmentsController extends Controller
 
 	public function filterAssesmentContext($filterChain)
 	{
-		//set the project identifier based on GET input request variables
 		if(isset($_GET['id'])) {
 			$this->loadSystem($_GET['id']);
 		} else { 
@@ -187,11 +186,10 @@ class AssesmentsController extends Controller
 	}
 
 	protected function loadSystem($systemId) {
-		//if the project property is null, create it based on input id
 		if($this->_system === null) {
 			$this->_system =  Systems::model()->findByPk($systemId);
 			if($this->_system === null) {
-				throw new CHttpException(404,'The requested project does not exist.');
+				throw new CHttpException(404,'The requested assesment does not exist.');
 			}
 		}
 		return $this->_system;

@@ -51,9 +51,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'scope',
 		'audience',
 		'description',
-		/*
-		'id_assesment',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

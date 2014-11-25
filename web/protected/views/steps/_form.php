@@ -13,56 +13,64 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+	'htmlOptions' => array("class"=>"form-horizontal col-sm-12", "role" => "form"),
 )); ?>
+	<br>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<?php echo $form->textField($model,'id_standard',array('hidden'=>'true','value'=>$model->idStandard->id_standard)); ?>
+	
+	<div class="form-group">
+	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'name'); ?></label>
+	    <div class="col-sm-4">
+	    	<?php echo $form->textField($model,'name',array('size'=>50,'maxlength'=>50, 'class' => 'form-control')); ?>	      
+	    </div>
+	    <?php echo $form->error($model,'name',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
+  	</div>
 
-	<?php echo $form->errorSummary($model); ?>
+	<div class="form-group">
+	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'description'); ?></label>
+	    <div class="col-sm-4">
+	    	<?php echo $form->textArea($model,'description',array('class' => 'form-control')); ?>	      
+	    </div>
+	    <?php echo $form->error($model,'description',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
+  	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'name'); ?>
-	</div>
+	<div class="form-group">
+	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'order'); ?></label>
+	    <div class="col-sm-4">
+	    	<?php echo $form->textField($model,'order',array('size'=>50,'maxlength'=>50, 'class' => 'form-control')); ?>	      
+	    </div>
+	    <?php echo $form->error($model,'order',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
+  	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
+	<div class="form-group">
+	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'notes'); ?></label>
+	    <div class="col-sm-4">
+	    	<?php echo $form->textArea($model,'notes',array('class' => 'form-control')); ?>	      
+	    </div>
+	    <?php echo $form->error($model,'notes',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
+  	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'order'); ?>
-		<?php echo $form->textField($model,'order'); ?>
-		<?php echo $form->error($model,'order'); ?>
-	</div>
+	<div class="form-group">
+	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'guidelines'); ?></label>
+	    <div class="col-sm-4">
+	    	<?php echo $form->textArea($model,'guidelines',array('class' => 'form-control')); ?>	      
+	    </div>
+	    <?php echo $form->error($model,'guidelines',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
+  	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'notes'); ?>
-		<?php echo $form->textArea($model,'notes',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'notes'); ?>
-	</div>
+	<div class="form-group">
+	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'tools'); ?></label>
+	    <div class="col-sm-4">
+	    	<?php echo $form->textArea($model,'tools',array('class' => 'form-control')); ?>	      
+	    </div>
+	    <?php echo $form->error($model,'tools',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
+  	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'guidelines'); ?>
-		<?php echo $form->textArea($model,'guidelines',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'guidelines'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'tools'); ?>
-		<?php echo $form->textArea($model,'tools',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'tools'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_standard'); ?>
-		<?php echo $form->textField($model,'id_standard'); ?>
-		<?php echo $form->error($model,'id_standard'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group">
+    	<div class="col-sm-offset-2 col-sm-4">
+            <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>

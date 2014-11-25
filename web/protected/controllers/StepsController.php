@@ -6,7 +6,8 @@ class StepsController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
+	private $_standard;
 
 	/**
 	 * @return array action filters
@@ -16,6 +17,7 @@ class StepsController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
+			'stepContext + create', //check to ensure valid project context
 		);
 	}
 
@@ -63,6 +65,7 @@ class StepsController extends Controller
 	public function actionCreate()
 	{
 		$model=new Steps;
+		$model->id_standard = $this->_standard->id_standard;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -169,5 +172,26 @@ class StepsController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function filterStepContext($filterChain)
+	{
+		if(isset($_GET['id'])) {
+			$this->loadStandard($_GET['id']);
+		} else { 
+			throw new CHttpException(403,'Must specify a standard before performing this action.');
+		}
+		//complete the running of other filters and execute the requested action
+		$filterChain->run();
+	}
+
+	protected function loadStandard($systemId) {
+		if($this->_standard === null) {
+			$this->_standard =  Standards::model()->findByPk($systemId);
+			if($this->_standard === null) {
+				throw new CHttpException(404,'The requested standard does not exist.');
+			}
+		}
+		return $this->_standard;
 	}
 }

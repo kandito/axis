@@ -15,19 +15,57 @@ $this->menu=array(
 	array('label'=>'Manage Steps', 'url'=>array('admin')),
 );
 ?>
-
-<h1>View Steps #<?php echo $model->id_step; ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id_step',
-		'name',
-		'description',
-		'order',
-		'notes',
-		'guidelines',
-		'tools',
-		'id_standard',
-	),
-)); ?>
+<div class="header-home">
+    <div class="container">
+    <div class="row"> 
+    <div class="col-xs-8">     
+        <h1>Detail <?php echo $model->name; ?></h1>
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Standard : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->idStandard->name; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Nama : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->name; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Description : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->description; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Order : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->order; ?></label>  
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Notes : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->notes; ?></label>  
+            </div>
+          </div>  
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Guidlines : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->guidelines; ?></label>  
+            </div>
+          </div>  
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Tools : </label>
+            <div class="col-sm-8">
+              <label class="control-label"><?php echo $model->tools; ?></label>  
+            </div>
+          </div>
+          
+        </form>
+        </div>
+      </div>
+    </div>      
+</div><!--/.header-home-->

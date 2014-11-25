@@ -28,6 +28,17 @@
   	</div>
 
 	<div class="form-group">
+	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'id_standard'); ?></label>
+	    <div class="col-sm-4">
+	    	<?php 
+	    		$standard = CHtml::listData(Standards::model()->findAll(),'id_standard','name');
+	    		echo $form->dropDownList($model,'id_standard', $standard, array('class' => 'form-control')); 
+	    	?> 
+	    </div>
+	    <?php echo $form->error($model,'id_standard',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
+  	</div>
+
+	<div class="form-group">
 	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'description'); ?></label>
 	    <div class="col-sm-4">
 	    	<?php echo $form->textArea($model,'description',array('class' => 'form-control')); ?>	      
@@ -77,7 +88,7 @@
 
 	<div class="form-group">
     	<div class="col-sm-offset-2 col-sm-4">
-            <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
+            <?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan', array('class'=>'btn btn-default')); ?>
 		</div>
 	</div>
 

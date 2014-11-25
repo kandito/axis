@@ -48,7 +48,7 @@ $this->menu=array(
 <div class="container">
   <div class="row content-container">
     <h3>Daftar Hasil</h3>
-    <?php echo CHtml::link('Tambahkan Result', Yii::app()->createUrl("stepresults/create", array('id'=>$model->id_user_assesment)), array('class' => 'btn btn-primary')); ?>
+    <?php echo CHtml::link('Tambahkan Hasil', Yii::app()->createUrl("stepresults/create", array('id'=>$model->id_user_assesment)), array('class' => 'btn btn-primary')); ?>
     <br>
     <br>
   <table class="table table-hover table-striped">
@@ -70,7 +70,6 @@ $this->menu=array(
           <td><?php echo $step_result->comment ?></td>
           <td><?php echo $step_result->notes ?></td>
           <td>
-            <button type="button" class="btn btn-success">Download</button>
             <?php 
               echo CHtml::link('View', array('stepresults/view', 'id'=>$step_result->id_step_result), array('class' => 'btn btn-primary')); 
               echo CHtml::link("Delete", '#', array(

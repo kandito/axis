@@ -3,35 +3,33 @@
 /* @var $data Standards */
 ?>
 
-<div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_standard')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id_standard), array('view', 'id'=>$data->id_standard)); ?>
-	<br />
+<tr>
+	<td>
+		<?php echo $index + 1; ?> 
+	</td>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
+	<td>
 	<?php echo CHtml::encode($data->name); ?>
-	<br />
+	</td>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('purpose')); ?>:</b>
-	<?php echo CHtml::encode($data->purpose); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('scope')); ?>:</b>
-	<?php echo CHtml::encode($data->scope); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('audience')); ?>:</b>
-	<?php echo CHtml::encode($data->audience); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('description')); ?>:</b>
-	<?php echo CHtml::encode($data->description); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_assesment')); ?>:</b>
-	<?php echo CHtml::encode($data->id_assesment); ?>
-	<br />
+	<td>
+	<?php echo CHtml::link(CHtml::encode($data->id_standard), array('view', 'id'=>$data->id_standard)); ?>
+	</td>
 
 
-</div>
+	<td>
+        <?php 
+        	echo CHtml::link("View", array('view', 'id'=>$data->id_standard), array('class' => 'btn btn-primary btn-listview')); 
+        	echo CHtml::link("Edit", array('update', 'id'=>$data->id_standard), array('class' => 'btn btn-success btn-listview'));
+        	echo CHtml::link("Delete", '#', array(
+				'submit'=>array(
+					'delete', 
+					'id' => $data->id_standard),
+				'params'=> array('returnUrl'=> Yii::app()->createUrl('standards/index')),
+				'confirm' => 'Are you sure you want to delete?',
+        		'class' => 'btn btn-danger btn-listview'));
+        ?>
+	</td>
+
+</tr>
