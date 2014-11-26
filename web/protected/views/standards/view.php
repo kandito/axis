@@ -16,51 +16,44 @@ $this->menu=array(
 );
 ?>
 
-<div class="header-home">
-    <div class="container">
-    <div class="row"> 
-    <div class="col-xs-8">     
-        <h1>Detail <?php echo $model->name; ?></h1>
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Nama : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->name; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Purpose : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->purpose; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Scope : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->scope; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Audience : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->audience; ?></label>  
-            </div>
-          </div>  
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Description : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->description; ?></label>  
-            </div>
-          </div>  
-          
-        </form>
-        </div>
+<div class="col-lg-12 col-header">     
+  <h1 class="page-header">Detail <?php echo $model->name; ?></h1>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Nama : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->name; ?></label>  
       </div>
-    </div>      
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Purpose : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->purpose; ?></label>  
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Scope : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->scope; ?></label>  
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Audience : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->audience; ?></label>  
+      </div>
+    </div>  
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Description : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->description; ?></label>  
+      </div>
+    </div>  
+    
+  </form>     
 </div><!--/.header-home-->
 
-<div class="container">
-  <div class="row content-container">
+<div class="col-lg-12 col-header">
     <h3>Daftar Langkah Assesment</h3>
     <?php echo CHtml::link('Tambahkan Step', Yii::app()->createUrl("steps/create",array("id"=>$model->id_standard)), array('class' => 'btn btn-primary')); ?>
     <br>
@@ -99,5 +92,4 @@ $this->menu=array(
         </tr>
    	<?php } ?>
   </table>
-  </div>
 </div>

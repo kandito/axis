@@ -12,20 +12,13 @@ $this->menu=array(
 );
 ?>
 
-<div class="header-home">
-<div class="container">
-<div class="row"> 
-<div class="col-xs-8">     
-    <h1>Standard</h1>
+<div class="col-lg-12 col-header">     
+    <h1 class="page-header">Standard</h1>
     <p></p>
     <?php echo CHtml::link('Tambah Standard', array('standards/create'), array('class' => 'btn btn-primary')); ?>
 </div>
-</div>
-</div>      
-</div><!--/.container-->
 
-<div class="container">
-  <div class="row content-container">
+<div class="col-lg-12 col-header">
   <table class="table table-hover table-striped">
     <thead>
       <td>No</td>
@@ -39,5 +32,4 @@ $this->menu=array(
 		'template' => '{items}{pager}',
 	)); ?>
   </table>
-  </div>
 </div>

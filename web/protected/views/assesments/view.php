@@ -15,57 +15,50 @@ $this->menu=array(
 	array('label'=>'Manage Assesments', 'url'=>array('admin')),
 );
 ?>
-<div class="header-home">
-    <div class="container">
-    <div class="row"> 
-    <div class="col-xs-8">     
-        <h1>Detail <?php echo $model->name; ?></h1>
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Nama : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->name; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Deskripsi : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->description; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Tanggal: </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->date; ?> <?php echo $model->date; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Tujuan : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->objectives; ?></label>  
-            </div>
-          </div>  
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Kebutuhan : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->requirements; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Lokasi : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->location; ?></label>  
-            </div>
-          </div>
-          
-        </form>
-        </div>
+<div class="col-lg-12 col-header">    
+  <h1 class="page-header">Detail <?php echo $model->name; ?></h1>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Nama : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->name; ?></label>  
       </div>
-    </div>      
-</div><!--/.header-home-->
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Deskripsi : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->description; ?></label>  
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Tanggal: </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->date; ?> <?php echo $model->time; ?></label>  
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Tujuan : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->objectives; ?></label>  
+      </div>
+    </div>  
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Kebutuhan : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->requirements; ?></label>  
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Lokasi : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->location; ?></label>  
+      </div>
+    </div>
+    
+  </form>
+</div>
 
-<div class="container">
-  <div class="row content-container">
+<div class="col-lg-12">
     <h3>Daftar Auditor</h3>
     <?php echo CHtml::link('Tambahkan Auditor', Yii::app()->createUrl("userassesments/create", array('id'=>$model->id_assesment)), array('class' => 'btn btn-primary')); ?>
     <br>
@@ -88,7 +81,8 @@ $this->menu=array(
           <td><?php echo $user_assesment->id_user_assesment ?></td>
           <td>
             <?php 
-              echo CHtml::link('View', array('userassesments/view', 'id'=>$user_assesment->id_user_assesment), array('class' => 'btn btn-primary')); 
+              echo CHtml::link('View', array('userassesments/view', 'id'=>$user_assesment->id_user_assesment), array('class' => 'btn btn-primary btn-listview')); 
+              echo CHtml::link('Update', array('userassesments/update', 'id'=>$user_assesment->id_user_assesment), array('class' => 'btn btn-success btn-listview'));  
               echo CHtml::link("Delete", '#', array(
               'submit'=>array(
                 'userassesments/delete', 
@@ -101,5 +95,4 @@ $this->menu=array(
         </tr>
    	<?php } ?>
   </table>
-  </div>
 </div>

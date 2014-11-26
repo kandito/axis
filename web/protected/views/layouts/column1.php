@@ -1,7 +1,8 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
 	
-	<?php if(isset($this->breadcrumbs)):?>
+	
+	<?php /* if(isset($this->breadcrumbs)):?>
 	<div class="grey-bg">
       <div class="container main-content">
         <div class="row"> 
@@ -15,8 +16,8 @@
         </div>
       </div>
     </div>
-	<?php endif?>
-
+	<?php endif */?>
+	
 	<?php echo $content; ?>
 	<!-- content -->
 <?php $this->endContent(); ?>

@@ -41,6 +41,14 @@ return array(
 		),
 		// uncomment the following to enable URLs in path-format
 		
+		'clientScript'=>array(
+			'class' => 'CClientScript',
+			'scriptMap' => array(
+				'jquery.js'=>false,
+			),
+			'coreScriptPosition' => CClientScript::POS_BEGIN,
+		),
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,

@@ -13,14 +13,10 @@ $this->menu=array(
 );
 ?>
 
-<div class="header-home">
-<div class="container">
-<div class="row"> 
-<div class="col-xs-8">     
+<div class="col-lg-12 col-header">    
     <h1>Tambahkan Step</h1>
 </div>
-</div>
-</div>      
-</div><!--/.container-->
 
+<div class="col-lg-12">
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

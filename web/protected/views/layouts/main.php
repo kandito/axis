@@ -1,106 +1,205 @@
-<?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico">
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
 
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap Core CSS -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+     <!-- Custom styles for this template -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/general.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- MetisMenu CSS -->
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Custom CSS -->
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-  </head>
+</head>
 
-  <body>
-    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">AXIS</a>
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Sipintar V.2</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+           
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <?php $this->widget('zii.widgets.CMenu',array(
+                        'items'=>array(
+                                array('label'=>'<i class="fa fa-home fa-fw"></i> Dashboard', 'url'=>array('/systems/index')),
+                                array('label'=>'<i class="fa fa-table fa-fw"></i> Standard', 'url'=>array('/standards/index')),
+                                array('label'=>'<i class="fa fa-user fa-fw"></i> Users', 'url'=>array('/users/index', 'view' => 'about')),
+                                array('label'=>'<i class="fa fa-phone fa-fw"></i> Contact', 'url'=>array('/site/contact')),
+                            ),
+                            'encodeLabel' => false,
+                            'htmlOptions' => array(
+                                'class'=>'nav',
+                                'id' => 'side-menu',
+                                ),
+                        )); ?>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <?php echo $content; ?>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
         </div>
-        <div class="collapse navbar-collapse">
-          	<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-					array('label'=>'Home', 'url'=>array('/systems/index')),
-          array('label'=>'Standard', 'url'=>array('/standards/index')),
-					array('label'=>'About', 'url'=>array('/site/page', 'view' => 'about')),
-					array('label'=>'Contact', 'url'=>array('/site/contact')),
-				),
-				'encodeLabel' => false,
-                'htmlOptions' => array(
-                    'class'=>'nav navbar-nav',
-                	),
-			)); ?>
+        <!-- /#page-wrapper -->
 
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo Yii::app()->user->name ?> <b class="caret"></b></a>
-
-              <?php $this->widget('zii.widgets.CMenu',array(
-				'items'=>array(
-					array('label'=>'Settings', 'url'=>array('/site/settings'), 'visible'=>!Yii::app()->user->isGuest),
-					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-					array('label'=>'Logout ('.Yii::app()->user->name.') ', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-				),
-				'encodeLabel' => false,
-                'htmlOptions' => array(
-                    'class'=>'dropdown-menu',
-                	),
-			)); ?>
-            </li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
-
-    <?php echo $content; ?>
-
-<!-- Modal for Delete-->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Apakah anda yakin akan menghapus data ini?</h4>
-      </div>
-      <div class="modal-body">
-       Sistem yang sudah dihapus tidak dapat dikembalikan lagi.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
     </div>
-  </div>
-</div>
-
+    <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/sb-admin-2.js"></script>
 
     <script>
     $('#myModal').on('show.bs.modal', function (event) {
@@ -113,5 +212,7 @@
       modal.find('#modal_delete_url').on('click', function(event) {jQuery.yii.submitForm(this,url,{});return false;})
     })
     </script>
-  </body>
+
+</body>
+
 </html>

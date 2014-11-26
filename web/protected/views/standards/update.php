@@ -17,15 +17,10 @@ $this->menu=array(
 ?>
 
 
-<div class="header-home">
-<div class="container">
-<div class="row"> 
-<div class="col-xs-8">     
-    <h1><h1>Update Standards #<?php echo $model->id_standard; ?></h1></h1>
+<div class="col-lg-12 col-header">     
+    <h1 class="page-header"><h1>Update Standards #<?php echo $model->id_standard; ?></h1></h1>
 </div>
-</div>
-</div>      
-</div><!--/.container-->
 
-
+<div class="col-lg-12">
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

@@ -13,21 +13,13 @@ $this->menu=array(
 ?>
 
 
-<div class="header-home">
-<div class="container">
-<div class="row"> 
-<div class="col-xs-8">     
-    <h1>Selamat datang, <?php echo Yii::app()->user->name ?>!</h1>
+<div class="col-lg-12 col-header">   
+    <h1 class="page-header">Selamat datang, <?php echo Yii::app()->user->name ?>!</h1>
     <p></p>
     <?php echo CHtml::link('Tambah Sistem', array('systems/create'), array('class' => 'btn btn-primary')); ?>
 </div>
-</div>
-</div>      
-</div><!--/.container-->
 
-
-<div class="container">
-  <div class="row content-container">
+<div class="col-lg-12">
   <table class="table table-hover table-striped">
     <thead>
       <td>No</td>
@@ -42,5 +34,4 @@ $this->menu=array(
 		'template' => '{items}{pager}',
 	)); ?>
   </table>
-  </div>
 </div>

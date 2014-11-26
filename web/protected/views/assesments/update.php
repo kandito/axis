@@ -16,6 +16,10 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Assesments <?php echo $model->id_assesment; ?></h1>
+<div class="col-lg-12 col-header">
+	<h1 class="page-header">Update Assesments <?php echo $model->id_assesment; ?></h1>
+</div>
 
+<div class="col-lg-12">
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

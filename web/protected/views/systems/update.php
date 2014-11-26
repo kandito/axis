@@ -15,15 +15,10 @@ $this->menu=array(
 	array('label'=>'Manage System', 'url'=>array('admin')),
 );
 ?>
-<div class="header-home">
-<div class="container">
-<div class="row"> 
-<div class="col-xs-8">     
-    <h1>Ubah Sistem #<?php echo $model->id_system; ?></h1>
+<div class="col-lg-12 col-header">  
+    <h1 class="page-header">Ubah Sistem #<?php echo $model->id_system; ?></h1>
 </div>
-</div>
-</div>      
-</div><!--/.container-->
 
-
+<div class="col-lg-12">  
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

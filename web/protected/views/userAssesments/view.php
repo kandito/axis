@@ -15,38 +15,31 @@ $this->menu=array(
 	array('label'=>'Manage UserAssesments', 'url'=>array('admin')),
 );
 ?>
-<div class="header-home">
-    <div class="container">
-    <div class="row"> 
-    <div class="col-xs-8">     
-        <h1>Detail: <?php echo $model->idAssesment->name ?> </h1>
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Sistem : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->idAssesment->idSystem->name; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Assesment : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->idAssesment->name; ?></label>  
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Auditor : </label>
-            <div class="col-sm-8">
-              <label class="control-label"><?php echo $model->idUser->name; ?></label>  
-            </div>
-          </div>
-        </form>
-        </div>
+<div class="col-lg-12 col-header">    
+  <h1 class="page-header">Detail: <?php echo $model->idAssesment->name ?> </h1>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Sistem : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->idAssesment->idSystem->name; ?></label>  
       </div>
-    </div>      
-</div><!--/.header-home-->
-
-<div class="container">
-  <div class="row content-container">
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Assesment : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->idAssesment->name; ?></label>  
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Auditor : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->idUser->name; ?></label>  
+      </div>
+    </div>
+  </form>
+</div>
+      
+<div class="col-lg-12">
     <h3>Daftar Hasil</h3>
     <?php echo CHtml::link('Tambahkan Hasil', Yii::app()->createUrl("stepresults/create", array('id'=>$model->id_user_assesment)), array('class' => 'btn btn-primary')); ?>
     <br>
@@ -71,7 +64,8 @@ $this->menu=array(
           <td><?php echo $step_result->notes ?></td>
           <td>
             <?php 
-              echo CHtml::link('View', array('stepresults/view', 'id'=>$step_result->id_step_result), array('class' => 'btn btn-primary')); 
+              echo CHtml::link('View', array('stepresults/view', 'id'=>$step_result->id_step_result), array('class' => 'btn btn-primary btn-listview')); 
+              echo CHtml::link('Update', array('stepresults/update', 'id'=>$step_result->id_step_result), array('class' => 'btn btn-success btn-listview')); 
               echo CHtml::link("Delete", '#', array(
               'submit'=>array(
                 'stepresults/delete', 
@@ -83,6 +77,5 @@ $this->menu=array(
           </td>
         </tr>
    	<?php } ?>
-  </table>
-  </div>
+  </table>  
 </div>

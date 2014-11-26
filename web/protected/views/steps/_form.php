@@ -69,7 +69,7 @@
 
 	<div class="form-group">
     	<div class="col-sm-offset-2 col-sm-4">
-            <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
+            <?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan', array('class'=>'btn btn-default')); ?>
 		</div>
 	</div>
 
