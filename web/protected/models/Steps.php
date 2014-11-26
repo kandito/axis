@@ -117,4 +117,12 @@ class Steps extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function get_step_result($userAssesmentId) {
+		$step_result = StepResults::model()->findByAttributes(array(
+				'id_step' => $this->id_step,
+				'id_user_assesment' => $userAssesmentId
+			));
+		return $step_result;
+	}
 }

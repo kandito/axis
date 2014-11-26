@@ -13,6 +13,10 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create StepResults</h1>
+<div class="col-lg-12 col-header">   
+<h1 class="page-header">Isi Penilaian</h1>
+</div>
 
+<div class="col-lg-12 col-header">   
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

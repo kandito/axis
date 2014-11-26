@@ -48,3 +48,7 @@ thead{
 	margin-left: 3px;
 	margin-right: 3px;
 }
+.label-view {
+	font-weight: normal !important;
+	text-align: left !important;
+}

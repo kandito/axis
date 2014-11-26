@@ -9,7 +9,10 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Contact Us</h1>
+
+<div class="col-lg-12 col-header"> 
+<h1 class="page-header">Contact Us</h1>
+</div>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
@@ -35,7 +38,10 @@ If you have business inquiries or other questions, please fill out the following
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<style>
+	.row label { width: 100px;}
+	.row input { width: 300px;}
+	</style>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>

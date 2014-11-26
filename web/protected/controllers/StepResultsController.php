@@ -7,6 +7,9 @@ class StepResultsController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column1';
+	private $_step;
+	private $_userassesment;
+
 
 	/**
 	 * @return array action filters
@@ -16,6 +19,7 @@ class StepResultsController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
+			'StepResultContext + create', //check to ensure valid project context
 		);
 	}
 
@@ -29,14 +33,14 @@ class StepResultsController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'roles'=>array('admin','user'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'actions'=>array('create','update','delete'),
+				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -63,6 +67,8 @@ class StepResultsController extends Controller
 	public function actionCreate()
 	{
 		$model=new StepResults;
+		$model->idStep = $this->_step;
+		$model->idUserAssesment = $this->_userassesment;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -169,5 +175,37 @@ class StepResultsController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function filterStepResultContext($filterChain)
+	{
+		if(isset($_GET['id']) && isset($_GET['step'])) {
+			$this->loadStep($_GET['step']);
+			$this->loadUserassesment($_GET['id']);
+		} else { 
+			throw new CHttpException(403,'Must specify a assesment before performing this action.');
+		}
+		//complete the running of other filters and execute the requested action
+		$filterChain->run();
+	}
+
+	protected function loadStep($stepId) {
+		if($this->_step === null) {
+			$this->_step =  Steps::model()->findByPk($stepId);
+			if($this->_step === null) {
+				throw new CHttpException(404,'The requested step does not exist.');
+			}
+		}
+		return $this->_step;
+	}
+
+	protected function loadUserassesment($userAssesesmentId) {
+		if($this->_userassesment === null) {
+			$this->_userassesment =  UserAssesments::model()->findByPk($userAssesesmentId);
+			if($this->_userassesment === null) {
+				throw new CHttpException(404,'The requested assesment does not exist.');
+			}
+		}
+		return $this->_userassesment;
 	}
 }

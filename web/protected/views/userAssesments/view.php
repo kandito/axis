@@ -36,45 +36,70 @@ $this->menu=array(
         <label class="control-label"><?php echo $model->idUser->name; ?></label>  
       </div>
     </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Deskripsi : </label>
+      <div class="col-sm-8">
+        <label class="control-label"><?php echo $model->idAssesment->description; ?></label>  
+      </div>
+    </div>
   </form>
 </div>
       
 <div class="col-lg-12">
     <h3>Daftar Hasil</h3>
-    <?php echo CHtml::link('Tambahkan Hasil', Yii::app()->createUrl("stepresults/create", array('id'=>$model->id_user_assesment)), array('class' => 'btn btn-primary')); ?>
-    <br>
     <br>
   <table class="table table-hover table-striped">
     <thead>
       <td>No</td>
-      <td>Nilai</td>
-      <td>Komentar</td>
-      <td>Catatan</td>
+      <td>Nama</td>
+      <td style="width: 550px">Deskripsi</td>
+      <td>Penilaian</td>
       <td>Action</td>
     </thead>
 
     <?php
     	$i = 1; 
-    	foreach ($model->stepResults as $step_result) { 
+    	foreach ($model->idAssesment->idStandard->steps as $step) { 
     ?>
     	<tr>
           <td><?php echo $i++ ?></td>
-          <td><?php echo $step_result->value ?></td>
-          <td><?php echo $step_result->comment ?></td>
-          <td><?php echo $step_result->notes ?></td>
           <td>
-            <?php 
-              echo CHtml::link('View', array('stepresults/view', 'id'=>$step_result->id_step_result), array('class' => 'btn btn-primary btn-listview')); 
-              echo CHtml::link('Update', array('stepresults/update', 'id'=>$step_result->id_step_result), array('class' => 'btn btn-success btn-listview')); 
-              echo CHtml::link("Delete", '#', array(
-              'submit'=>array(
-                'stepresults/delete', 
-                'id' => $step_result->id_step_result),
-              'params'=> array('returnUrl'=> Yii::app()->createUrl('userassesments/view',array('id' => $model->id_user_assesment))),
-              'confirm' => 'Are you sure you want to delete?',
-              'class' => 'btn btn-danger btn-listview'));
+          <?php 
+              echo CHtml::link($step->name, array('steps/view', 'id'=>$step->id_step)); 
+            ?>  
+          </td>
+          <td><?php echo $step->description ?></td>
+          
+          <?php
+            $step_result = $step->get_step_result($model->id_user_assesment);
+
+            if($step_result == null) {
+            //jika nilai belum ada
+          ?>
+          <td>
+            -
+          </td>
+          <td>
+            <?php
+            echo CHtml::link('Isi Nilai', array('stepresults/create', 'id'=>$model->id_user_assesment, 'step'=>$step->id_step), array('class' => 'btn btn-success'));
             ?>
           </td>
+          <?php
+            //jika nilai sudah ada
+            } else {
+          ?> 
+          <td>
+            <?php echo $step_result->value ?>
+          </td>
+          <td>
+            <?php 
+              echo CHtml::link('Lihat', array('stepresults/view', 'id'=>$step_result->id_step_result), array('class' => 'btn btn-primary btn-listview')); 
+            ?>
+          </td>
+          <?php
+            }
+          ?>
+
         </tr>
    	<?php } ?>
   </table>  

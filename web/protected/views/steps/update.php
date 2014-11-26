@@ -19,4 +19,6 @@ $this->menu=array(
 <div class="col-lg-12 col-header">
 	<h1 class="page-header">Update Steps <?php echo $model->id_step; ?></h1>
 </div>
+<div class="col-lg-12 col-header">
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

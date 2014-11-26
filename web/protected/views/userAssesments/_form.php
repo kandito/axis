@@ -31,7 +31,8 @@
 
 	<div class="form-group">
     	<div class="col-sm-offset-2 col-sm-4">
-            <?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan', array('class'=>'btn btn-default')); ?>
+            <?php echo CHtml::submitButton($model->isNewRecord ? 'Tambahkan' : 'Simpan', array('class'=>'btn btn-default')); ?>
+			<?php echo CHtml::link('Kembali', array('assesments/view','id'=>$model->idAssesment->id_assesment), array('class' => 'btn btn-success')); ?>
 		</div>
 	</div>
 

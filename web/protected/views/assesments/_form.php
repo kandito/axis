@@ -89,6 +89,7 @@
 	<div class="form-group">
     	<div class="col-sm-offset-2 col-sm-4">
             <?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan', array('class'=>'btn btn-default')); ?>
+			<?php echo CHtml::link('Kembali', array('systems/view','id' => $model->idSystem->id_system), array('class' => 'btn btn-success')); ?>
 		</div>
 	</div>
 

@@ -8,11 +8,13 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Create Users', 'url'=>array('create')),
-	array('label'=>'Manage Users', 'url'=>array('admin')),
+	// array('label'=>'Manage Users', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Users</h1>
+<div class="col-lg-12 col-header"> 
+<h1 class="page-header">Users</h1>
+</div>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

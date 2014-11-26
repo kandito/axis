@@ -64,14 +64,14 @@ class StepResults extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_step_result' => 'Id Step Result',
-			'value' => 'Value',
-			'notes' => 'Notes',
-			'time' => 'Time',
-			'date' => 'Date',
-			'comment' => 'Comment',
-			'id_step' => 'Id Step',
-			'id_user_assesment' => 'Id User Assesment',
+			'id_step_result' => 'ID Step Result',
+			'value' => 'Nilai',
+			'notes' => 'Catatan',
+			'time' => 'Waktu',
+			'date' => 'Tanggal',
+			'comment' => 'Komentar',
+			'id_step' => 'ID Step',
+			'id_user_assesment' => 'ID User Assesment',
 		);
 	}
 

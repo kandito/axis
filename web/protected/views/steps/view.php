@@ -22,43 +22,43 @@ $this->menu=array(
     <div class="form-group">
       <label class="col-sm-3 control-label">Standard : </label>
       <div class="col-sm-8">
-        <label class="control-label"><?php echo $model->idStandard->name; ?></label>  
+        <label class="control-label label-view"><?php echo $model->idStandard->name; ?></label>  
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-3 control-label">Nama : </label>
       <div class="col-sm-8">
-        <label class="control-label"><?php echo $model->name; ?></label>  
+        <label class="control-label label-view"><?php echo $model->name; ?></label>  
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-3 control-label">Description : </label>
       <div class="col-sm-8">
-        <label class="control-label"><?php echo $model->description; ?></label>  
+        <label class="control-label label-view"><?php echo $model->description; ?></label>  
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-3 control-label">Order : </label>
       <div class="col-sm-8">
-        <label class="control-label"><?php echo $model->order; ?></label>  
+        <label class="control-label label-view"><?php echo $model->order; ?></label>  
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-3 control-label">Notes : </label>
       <div class="col-sm-8">
-        <label class="control-label"><?php echo $model->notes; ?></label>  
+        <label class="control-label label-view"><?php echo $model->notes; ?></label>  
       </div>
     </div>  
     <div class="form-group">
       <label class="col-sm-3 control-label">Guidlines : </label>
       <div class="col-sm-8">
-        <label class="control-label"><?php echo $model->guidelines; ?></label>  
+        <label class="control-label label-view"><?php echo $model->guidelines; ?></label>  
       </div>
     </div>  
     <div class="form-group">
       <label class="col-sm-3 control-label">Tools : </label>
       <div class="col-sm-8">
-        <label class="control-label"><?php echo $model->tools; ?></label>  
+        <label class="control-label label-view"><?php echo $model->tools; ?></label>  
       </div>
     </div>
     

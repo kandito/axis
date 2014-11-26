@@ -15,9 +15,11 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<?php echo $form->errorSummary($model); ?>
+	
+	<style>
+	.row label { width: 100px;}
+	.row input { width: 300px;}
+	</style>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
@@ -42,10 +44,12 @@
 		<?php echo $form->textField($model,'role'); ?>
 		<?php echo $form->error($model,'role'); ?>
 	</div>
+	<br>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-success')); ?>
 	</div>
+	<br>
 
 <?php $this->endWidget(); ?>
 
