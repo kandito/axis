@@ -48,7 +48,7 @@ $this->menu=array(
 <div class="col-lg-12">
     <h3>Daftar Hasil</h3>
     <br>
-  <table class="table table-hover table-striped">
+  <table id="assessment" class="table table-hover table-striped">
     <thead>
       <td>No</td>
       <td>Nama</td>
@@ -104,3 +104,35 @@ $this->menu=array(
    	<?php } ?>
   </table>  
 </div>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/plugins/dataTables.bootstrap.css" rel="stylesheet">
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/plugins/dataTables.tableTools.css" rel="stylesheet">
+
+<script>
+$(document).ready( function () {
+    //$('#assessment').DataTable();
+    $('#assessment').DataTable( {
+        "dom": 'T<"clear">lfrtip',
+        "aoColumns": [
+          { "bSortable": false },
+          { "bSortable": false },
+          { "bSortable": false },
+          { "bSortable": false },
+          { "bSortable": false }
+        
+        ] ,
+      "tableTools": {
+            "sSwfPath": "<?php echo Yii::app()->request->baseUrl; ?>/js/plugins/dataTables/swf/copy_csv_xls_pdf.swf",
+             "aButtons": [
+            {
+                "sExtends": "pdf",
+                "sTitle" : "<?php echo $model->idAssesment->idSystem->name." - ".$model->idAssesment->name." - ".$model->idUser->name; ?>",
+                "mColumns": [0, 1, 2, 3]
+            }
+        ]
+        }
+    } );
+} );
+</script>
