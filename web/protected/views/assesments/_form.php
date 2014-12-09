@@ -49,19 +49,36 @@
 	<div class="form-group">
 	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'date'); ?></label>
 	    <div class="col-sm-4">
-	    	<?php echo $form->textField($model,'date',array('size'=>50,'maxlength'=>50, 'class' => 'form-control')); ?>	      
+				<div class='input-group date' id='datetimepicker1'>
+	    	<?php echo $form->textField($model,'date',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','data-date-format'=>"YYYY-mm-DD")); ?>	      
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
 	    </div>
 	    <?php echo $form->error($model,'date',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
   	</div>
-
 	<div class="form-group">
 	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'time'); ?></label>
 	    <div class="col-sm-4">
-	    	<?php echo $form->textField($model,'time',array('size'=>50,'maxlength'=>50, 'class' => 'form-control')); ?>	      
+	    	<div class='input-group date' id='datetimepicker4'>
+            	<?php echo $form->textField($model,'time',array('size'=>50,'maxlength'=>50, 'class' => 'form-control',' data-date-format'=>"HH:mm")); ?>	      
+	    	        <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
 	    </div>
 	    <?php echo $form->error($model,'time',array('class'=>'alert alert-danger col-sm-4',  'role' => 'alert')); ?>
   	</div>
+<script>
+$(document).ready(function(){
+    $('#datetimepicker1').datetimepicker({					
+    	pickTime: false
+		});
+    $('#datetimepicker4').datetimepicker({
+        pickDate: false,pick12HourFormat: false
 
+    });           
+});
+</script>
 	<div class="form-group">
 	    <label class="col-sm-2 control-label"><?php echo $form->labelEx($model,'location'); ?></label>
 	    <div class="col-sm-4">

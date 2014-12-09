@@ -331,3 +331,48 @@ Stack trace:
 REQUEST_URI=/axis/web/plugins/dataTables/swf/copy_csv_xls_pdf.swf
 HTTP_REFERER=http://localhost/axis/web/userassesments/1
 ---
+2014/12/09 16:52:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/axis/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/09 16:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/axis/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/09 17:36:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/plugins/boostrap-datepicker.js".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('js/plugins/boos...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/js/plugins/boostrap-datepicker.js
+HTTP_REFERER=http://localhost/axis/web/assesments/create/1
+---
+2014/12/09 17:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/plugins/bootstrap-datetimepicker.min".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/plugins/boo...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/plugins/bootstrap-datetimepicker.min
+HTTP_REFERER=http://localhost/axis/web/assesments/create/1
+---
+2014/12/09 17:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-datetimepicker.min".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-da...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/js/bootstrap-datetimepicker.min
+HTTP_REFERER=http://localhost/axis/web/assesments/create/1
+---
