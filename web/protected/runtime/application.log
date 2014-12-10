@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2014/11/03 15:04:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assesment".' in C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php(141): CWebApplication->runController('assesment')
@@ -5430,4 +5431,383 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/tugasmki/web/userassesments/update/2
 HTTP_REFERER=http://localhost/tugasmki/web/assesments/2
+=======
+2014/11/03 18:57:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tugasmki.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/11/25 09:52:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/favicon.ico
+---
+2014/11/25 12:37:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/favicon.ico
+---
+2014/11/25 12:37:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in C:\xampp\htdocs\axis\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CController.php(270): CController->missingAction('about')
+#1 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('about')
+#2 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#3 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/axis/web/site/about
+HTTP_REFERER=http://localhost/axis/web/systems/index
+---
+2014/12/07 17:30:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('standards/creat...')
+#9 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/axis/web/standards/create
+HTTP_REFERER=http://localhost/axis/web/standards/index
+---
+2014/12/07 17:30:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('assesments/crea...')
+#9 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/axis/web/assesments/create/1
+HTTP_REFERER=http://localhost/axis/web/systems/1
+---
+2014/12/08 07:32:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('users/create')
+#9 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/axis/web/users/create
+HTTP_REFERER=http://localhost/axis/web/users/index?view=about
+---
+2014/12/08 07:32:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('systems/create')
+#9 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/axis/web/systems/create
+HTTP_REFERER=http://localhost/axis/web/systems/index
+---
+2014/12/08 07:32:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('assesments/crea...')
+#9 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/axis/web/assesments/create/1
+HTTP_REFERER=http://localhost/axis/web/systems/1
+---
+2014/12/08 07:32:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('assesments/upda...')
+#9 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/axis/web/assesments/update/1
+HTTP_REFERER=http://localhost/axis/web/systems/1
+---
+2014/12/08 07:32:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('stepresults/cre...')
+#9 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/axis/web/stepresults/create/1?step=1
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 07:33:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('stepresults/cre...')
+#9 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/axis/web/stepresults/create/1?step=1
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 10:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/plugins/jquery.dataTables.js".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('js/plugins/jque...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/js/plugins/jquery.dataTables.js
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 10:56:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_both.png".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/images/sort_both.png
+HTTP_REFERER=http://localhost/axis/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/08 10:56:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/axis/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/08 10:56:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_desc.png".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/images/sort_desc.png
+HTTP_REFERER=http://localhost/axis/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/08 11:09:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('swf/copy_csv_xl...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:09:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\axis\web\protected\controllers\StepResultsController.php:163
+Stack trace:
+#0 C:\xampp\htdocs\axis\web\protected\controllers\StepResultsController.php(59): StepResultsController->loadModel('1')
+#1 [internal function]: StepResultsController->actionView('1')
+#2 C:\xampp\htdocs\axis\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(StepResultsController), Array)
+#3 C:\xampp\htdocs\axis\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(StepResultsController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\axis\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('stepresults/vie...')
+#14 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/axis/web/stepresults/1
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\axis\web\protected\controllers\StepResultsController.php:163
+Stack trace:
+#0 C:\xampp\htdocs\axis\web\protected\controllers\StepResultsController.php(59): StepResultsController->loadModel('1')
+#1 [internal function]: StepResultsController->actionView('1')
+#2 C:\xampp\htdocs\axis\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(StepResultsController), Array)
+#3 C:\xampp\htdocs\axis\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(StepResultsController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\axis\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\axis\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\axis\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\axis\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\axis\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\axis\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\axis\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('stepresults/vie...')
+#14 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/axis/web/stepresults/1
+---
+2014/12/08 11:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('swf/copy_csv_xl...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:09:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('swf/copy_csv_xl...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:09:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('swf/copy_csv_xl...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:09:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('swf/copy_csv_xl...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:11:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('swf/copy_csv_xl...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:15:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "plugins/dataTables/swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('plugins/dataTab...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/plugins/dataTables/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:15:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "plugins/dataTables/swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('plugins/dataTab...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/plugins/dataTables/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:15:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "plugins/dataTables/swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('plugins/dataTab...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/plugins/dataTables/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/08 11:15:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "plugins/dataTables/swf/copy_csv_xls_pdf.swf".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('plugins/dataTab...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/plugins/dataTables/swf/copy_csv_xls_pdf.swf
+HTTP_REFERER=http://localhost/axis/web/userassesments/1
+---
+2014/12/09 16:52:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/axis/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/09 16:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/axis/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/09 17:36:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/plugins/boostrap-datepicker.js".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('js/plugins/boos...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/js/plugins/boostrap-datepicker.js
+HTTP_REFERER=http://localhost/axis/web/assesments/create/1
+---
+2014/12/09 17:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/plugins/bootstrap-datetimepicker.min".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('css/plugins/boo...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/css/plugins/bootstrap-datetimepicker.min
+HTTP_REFERER=http://localhost/axis/web/assesments/create/1
+---
+2014/12/09 17:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-datetimepicker.min".' in C:\xampp\htdocs\axis\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\axis\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-da...')
+#1 C:\xampp\htdocs\axis\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\axis\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/axis/web/js/bootstrap-datetimepicker.min
+HTTP_REFERER=http://localhost/axis/web/assesments/create/1
+>>>>>>> 8edd33a416af653941fd495e4f49383e775a8417
 ---

@@ -24,6 +24,9 @@
     <!-- Custom CSS -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/sb-admin-2.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/plugins/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -112,6 +115,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/moment.js"></script>
+
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-datetimepicker.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/plugins/metisMenu/metisMenu.min.js"></script>
