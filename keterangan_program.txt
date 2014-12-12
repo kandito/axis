@@ -1,0 +1,20 @@
+Update Program
+- Perbaikan form input seperti penggunaan date dan time picker
+- Modul untuk meng-export laporan dalam bentuk PDF
+- Penambahan data berdasarkan standar NIST
+
+Akun
+user: admin
+pass: 123
+
+user: user
+pass: 123
+
+Setting database (mysql)
+host : localhost
+user : root
+pass : <string kosong>
+db	 : tugasmki
+
+akses di http://localhost/tugasmki/web
+  

@@ -5811,3 +5811,67 @@ REQUEST_URI=/axis/web/js/bootstrap-datetimepicker.min
 HTTP_REFERER=http://localhost/axis/web/assesments/create/1
 >>>>>>> 8edd33a416af653941fd495e4f49383e775a8417
 ---
+2014/12/10 13:22:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested assesment does not exist.' in C:\xampp\htdocs\tugasmki\web\protected\controllers\AssesmentsController.php:192
+Stack trace:
+#0 C:\xampp\htdocs\tugasmki\web\protected\controllers\AssesmentsController.php(180): AssesmentsController->loadSystem('13')
+#1 C:\xampp\htdocs\tugasmki\framework\web\filters\CInlineFilter.php(58): AssesmentsController->filterAssesmentContext(Object(CFilterChain))
+#2 C:\xampp\htdocs\tugasmki\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tugasmki\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\tugasmki\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tugasmki\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\tugasmki\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\tugasmki\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\tugasmki\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php(282): CController->run('create')
+#10 C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php(141): CWebApplication->runController('assesments/crea...')
+#11 C:\xampp\htdocs\tugasmki\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\tugasmki\web\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tugasmki/web/assesments/create/13
+HTTP_REFERER=http://localhost/tugasmki/web/systems/13
+---
+2014/12/10 13:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\tugasmki\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tugasmki\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tugasmki/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/tugasmki/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/10 13:23:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\tugasmki\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tugasmki\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tugasmki/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/tugasmki/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/12 13:04:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\tugasmki\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tugasmki\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tugasmki/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/tugasmki/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/12 13:08:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\tugasmki\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tugasmki\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tugasmki/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/tugasmki/web/css/plugins/dataTables.bootstrap.css
+---
+2014/12/12 13:09:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/sort_asc.png".' in C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tugasmki\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/sort...')
+#1 C:\xampp\htdocs\tugasmki\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tugasmki\web\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tugasmki/web/css/images/sort_asc.png
+HTTP_REFERER=http://localhost/tugasmki/web/css/plugins/dataTables.bootstrap.css
+---
